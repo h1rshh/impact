@@ -15,7 +15,6 @@ export default function Home() {
       <TwoColumnComponent />
       <Entertainment />
       <Countdown />
-      <Speaker />
       <AboveFooter />
       <Footer />
     </>
