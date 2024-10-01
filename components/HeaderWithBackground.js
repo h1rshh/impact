@@ -8,7 +8,7 @@ const HeaderWithBackground = () => {
       {/* Background Image with proper fitting */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="https://t3.ftcdn.net/jpg/07/09/02/00/240_F_709020036_socXa9tpfWa0TJuM9AYoyhmvWE7rsOiP.jpg"
+          src="https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951233.jpg"
           alt="Background Image"
           className="w-full h-full object-cover"
         />
@@ -19,7 +19,7 @@ const HeaderWithBackground = () => {
         <header className="flex justify-between items-center p-4 w-full">
           {/* Left: Logo */}
           <div className="text-3xl font-bold text-white">
-            #impact
+            <img src="/Logo.png" alt="Logo" className="h-32 w-auto" /> {/* Adjust height and width as needed */}
           </div>
 
           {/* Right: Navigation Links */}
@@ -41,7 +41,7 @@ const HeaderWithBackground = () => {
         {/* Main content aligned to the left with added padding */}
         <main className="flex flex-col items-start justify-center text-left h-full text-white px-6 lg:px-24 mt-20 ml-10"> {/* Adjust these classes */}
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
-            Built for the events  <br />
+            Built for the events <br />
             of today-and <br />
             tomorrow
           </h1>
