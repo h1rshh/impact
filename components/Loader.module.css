@@ -1,0 +1,71 @@
+/* From Uiverse.io by SchawnnahJ */
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+  }
+  
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+  }
+  
+  .loader:before {
+    animation: before8 2.5s infinite; /* Adjusted duration to 2.5s */
+  }
+  
+  .loader:after {
+    animation: after6 2.5s infinite; /* Adjusted duration to 2.5s */
+  }
+  
+  @keyframes before8 {
+    0% {
+      width: 0.5em;
+      box-shadow: 1em -0.5em red, -1em 0.5em black; /* Color 1: Red, Color 3: Black */
+    }
+    35% {
+      width: 2.5em;
+      box-shadow: 0 -0.5em red, 0 0.5em black; /* Color 1: Red, Color 3: Black */
+    }
+    70% {
+      width: 0.5em;
+      box-shadow: -1em -0.5em orange, 1em 0.5em navy; /* Color 2: Orange, Color 4: Navy */
+    }
+    100% {
+      box-shadow: 1em -0.5em orange, -1em 0.5em navy; /* Color 2: Orange, Color 4: Navy */
+    }
+  }
+  
+  @keyframes after6 {
+    0% {
+      height: 0.5em;
+      box-shadow: 0.5em 1em orange, -0.5em -1em navy; /* Color 2: Orange, Color 4: Navy */
+    }
+    35% {
+      height: 2.5em;
+      box-shadow: 0.5em 0 orange, -0.5em 0 black; /* Color 2: Orange, Color 3: Black */
+    }
+    70% {
+      height: 0.5em;
+      box-shadow: 0.5em -1em red, -0.5em 1em black; /* Color 1: Red, Color 3: Black */
+    }
+    100% {
+      box-shadow: 0.5em 1em red, -0.5em -1em black; /* Color 1: Red, Color 3: Black */
+    }
+  }
+  
+  .loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+  }
+  

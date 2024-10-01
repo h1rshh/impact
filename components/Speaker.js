@@ -30,20 +30,20 @@ const Speaker = () => {
   };
 
   return (
-    <div className="bg-white p-6 mx-4 my-10 rounded-lg shadow-lg">
+    <div className="bg-white p-4 md:p-6 mx-4 my-10 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-center mb-6">Our Speakers</h2>
 
-      {/* Speaker List (Horizontal at the top) */}
-      <div className="flex justify-center space-x-4 mb-6 overflow-x-auto">
+      {/* Speaker List (Responsive layout) */}
+      <div className="grid grid-cols-2 gap-4 mb-6 md:flex md:justify-center md:space-x-4 overflow-x-auto">
         {speakers.map((speaker, index) => (
           <button
             key={index}
             onClick={() => handleSpeakerClick(speaker)}
-            className={`p-4 border border-black rounded-lg transition-transform duration-300 ease-in-out hover:bg-black hover:text-white ${
+            className={`p-2 md:p-4 border border-black rounded-lg transition-transform duration-300 ease-in-out hover:bg-black hover:text-white ${
               selectedSpeaker.name === speaker.name
                 ? 'bg-black text-white font-bold'
                 : 'bg-white text-black'
-            }`}
+            } text-sm md:text-base`}
           >
             {speaker.name}
           </button>
