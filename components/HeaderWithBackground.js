@@ -19,7 +19,7 @@ const HeaderWithBackground = () => {
         <header className="flex justify-between items-center p-4 w-full">
           {/* Left: Logo */}
           <div className="text-3xl font-bold text-white">
-            <img src="/Logo.png" alt="Logo" className="h-32 w-auto" /> {/* Adjust height and width as needed */}
+            <img src="/Logo.png" alt="Logo" className="h-32 w-auto" />
           </div>
 
           {/* Right: Navigation Links */}
@@ -38,9 +38,9 @@ const HeaderWithBackground = () => {
           </nav>
         </header>
 
-        {/* Main content aligned to the left with added padding */}
-        <main className="flex flex-col items-start justify-center text-left h-full text-white px-6 lg:px-24 mt-20 ml-10"> {/* Adjust these classes */}
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+        {/* Main content aligned to the left with adjusted padding for better responsiveness */}
+        <main className="flex flex-col items-start justify-center text-left h-full text-white px-6 lg:px-24 mt-16 sm:mt-20 ml-6 lg:ml-10"> {/* Adjusted padding and margins */}
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
             Built for the events <br />
             of today-and <br />
             tomorrow
