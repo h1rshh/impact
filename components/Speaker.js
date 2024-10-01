@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const Speaker = () => {
-  // Array of speaker details
+  // Limited array of speaker details
   const speakers = [
     {
       name: 'Murari Bapu',
@@ -19,16 +19,6 @@ const Speaker = () => {
       image: 'https://c4.wallpaperflare.com/wallpaper/915/675/763/narendra-modi-prime-minister-presentation-wallpaper-preview.jpg',
       description: 'Narendra Modi, born on September 17, 1950, is the 14th and current Prime Minister of India, having held office since May 2014. A member of the Bharatiya Janata Party (BJP) and the Rashtriya Swayamsevak Sangh (RSS), he previously served as the Chief Minister of Gujarat from 2001 to 2014. Modi is known for his ambitious economic reforms, including the Goods and Services Tax (GST) and the Make in India initiative, aimed at boosting manufacturing and job creation. His government has also focused on digital transformation, infrastructure development, and initiatives like Swachh Bharat (Clean India). Modi is a prominent global figure, advocating for India interests on the international stage.',
     },
-    {
-      name: 'SadhGuru',
-      image: 'https://i.ytimg.com/vi/IMLHxsUKtT8/maxresdefault.jpg',
-      description: 'Sadhguru, born Jaggi Vasudev on September 3, 1967, is an Indian yogi, mystic, and author renowned for his teachings on spirituality and well-being. He founded the Isha Foundation in 1992, a non-profit organization offering yoga programs worldwide and various social and environmental initiatives, including the Rally for Rivers campaign to rejuvenate Indias rivers. Sadhguru emphasizes inner transformation through self-awareness and meditation, often integrating ancient wisdom with modern science. He has authored several books, including "Inner Engineering" and "Mystics Musings," and is known for his engaging public talks, addressing global issues, and inspiring millions to explore spirituality and personal growth.',
-    },
-    {
-      name: 'Jaya Kishori',
-      image: 'https://blackhattalent.com/wp-content/uploads/2024/01/Jaya-Kishori.jpg',
-      description: 'Jaya Kishori, born on July 13, 1996, is a prominent Indian devotional singer, storyteller, and motivational speaker, celebrated for her enchanting bhajans and kirtans. Hailing from Rajasthan, she gained immense popularity at a young age, captivating audiences with her melodious voice and spiritual charisma. Jaya Kishori is known for her unique storytelling style, particularly in the recitation of the Ramayana and Bhagavad Gita, which inspires her followers to connect deeply with their faith. Beyond music, she actively engages in philanthropic work, promoting education and social welfare initiatives. Her positive energy and devotion continue to resonate with millions worldwide.',
-    },
   ];
 
   // State to keep track of the selected speaker
@@ -44,7 +34,7 @@ const Speaker = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Our Speakers</h2>
 
       {/* Speaker List (Horizontal at the top) */}
-      <div className="flex justify-center space-x-4 mb-6">
+      <div className="flex justify-center space-x-4 mb-6 overflow-x-auto">
         {speakers.map((speaker, index) => (
           <button
             key={index}
@@ -65,7 +55,7 @@ const Speaker = () => {
         <img
           src={selectedSpeaker.image}
           alt={selectedSpeaker.name}
-          className="w-[30%] h-auto object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+          className="w-[70%] md:w-[40%] h-auto object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
         />
         <div className="text-center md:text-left">
           <h3 className="text-2xl font-semibold">{selectedSpeaker.name}</h3>
