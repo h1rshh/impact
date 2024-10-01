@@ -6,6 +6,8 @@ import Entertainment from "@/components/Entertainment";
 import Footer from "@/components/Footer";
 import Countdown from "@/components/Countdown";
 import AboveFooter from "@/components/AboveFooter";
+import Rcards from "@/components/Rcards";
+import FAQ from "@/components/FAQ"
 import Speaker from "@/components/Speaker";
 
 export default function Home() {
@@ -15,6 +17,9 @@ export default function Home() {
       <TwoColumnComponent />
       <Entertainment />
       <Countdown />
+      <Speaker />
+      <Rcards />
+      <FAQ />
       <AboveFooter />
       <Footer />
     </>

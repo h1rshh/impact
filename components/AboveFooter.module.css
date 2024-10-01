@@ -1,24 +1,29 @@
 .glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25); /* Increased opacity for better visibility on white background */
+    backdrop-filter: blur(15px); /* Increased blur for stronger glass effect */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Lighter border to enhance the glass effect */
     border-radius: 16px;
+    padding: 20px; /* Add padding to give some space inside the glass effect */
 }
 
 .glass-input {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15); /* Increased opacity for better input visibility */
+    backdrop-filter: blur(12px); /* Blur for the frosted glass effect on inputs */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Softer border */
     border-radius: 8px;
+    color: black; /* Changed text color to black for readability */
     padding: 10px;
-    color: white;
     transition: background 0.3s ease, border 0.3s ease;
 }
 
+.glass-input::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Darker placeholder for better readability */
+}
+
 .glass-input:focus {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.25); /* Slightly more opaque on focus */
+    border-color: rgba(255, 255, 255, 0.5); 
     outline: none;
 }

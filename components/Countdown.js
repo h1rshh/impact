@@ -17,7 +17,7 @@ const Countdown = () => {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -36,35 +36,39 @@ const Countdown = () => {
 
   return (
     <div
-      className="flex flex-col lg:flex-row justify-between items-center p-8 border-2 border-gray-300 bg-cover bg-center"
+      className="flex flex-col lg:flex-row justify-between items-center p-8 bg-white relative z-10"
       style={{
-        backgroundImage: "url('https://www.shutterstock.com/shutterstock/videos/1108516045/thumb/1.jpg?ip=x480')",
-        height: '40vh', // Changed height to 50vh
+        height: '40vh', // Set a specific height
+        borderRadius: '10px', // Slightly rounded corners for the whole component
+        boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', // Adding some shadow to the component
       }}
     >
-      {/* Left: Message */}
-      <div className="text-2xl font-bold text-white text-center lg:text-left mb-4 lg:mb-0">
-        <p>COUNTDOWN UNTIL EVENT</p>
-        <p className="mt-2">REGISTER NOW</p>
-      </div>
+      {/* Content */}
+      <div className="relative z-20 flex flex-col lg:flex-row justify-between items-center w-full">
+        {/* Left: Message */}
+        <div className="text-2xl font-bold text-black text-center lg:text-left mb-4 lg:mb-0">
+          <p>COUNTDOWN UNTIL EVENT</p>
+          <p className="mt-2">REGISTER NOW</p>
+        </div>
 
-      {/* Right: Countdown Timer */}
-      <div className="flex space-x-4 text-center">
-        <div className="p-4 border border-gray-500 rounded-md bg-black bg-opacity-50">
-          <span className="block text-3xl font-bold text-white">{timeLeft.days || '0'}</span>
-          <span className="text-white">Days</span>
-        </div>
-        <div className="p-4 border border-gray-500 rounded-md bg-black bg-opacity-50">
-          <span className="block text-3xl font-bold text-white">{timeLeft.hours || '0'}</span>
-          <span className="text-white">Hours</span>
-        </div>
-        <div className="p-4 border border-gray-500 rounded-md bg-black bg-opacity-50">
-          <span className="block text-3xl font-bold text-white">{timeLeft.minutes || '0'}</span>
-          <span className="text-white">Minutes</span>
-        </div>
-        <div className="p-4 border border-gray-500 rounded-md bg-black bg-opacity-50">
-          <span className="block text-3xl font-bold text-white">{timeLeft.seconds || '0'}</span>
-          <span className="text-white">Seconds</span>
+        {/* Right: Countdown Timer with new box color */}
+        <div className="flex space-x-4 text-center">
+          <div className="p-4 border border-blue-200 rounded-md bg-blue-100 shadow-lg">
+            <span className="block text-3xl font-bold text-black">{timeLeft.days || '0'}</span>
+            <span className="text-black">Days</span>
+          </div>
+          <div className="p-4 border border-blue-200 rounded-md bg-blue-100 shadow-lg">
+            <span className="block text-3xl font-bold text-black">{timeLeft.hours || '0'}</span>
+            <span className="text-black">Hours</span>
+          </div>
+          <div className="p-4 border border-blue-200 rounded-md bg-blue-100 shadow-lg">
+            <span className="block text-3xl font-bold text-black">{timeLeft.minutes || '0'}</span>
+            <span className="text-black">Minutes</span>
+          </div>
+          <div className="p-4 border border-blue-200 rounded-md bg-blue-100 shadow-lg">
+            <span className="block text-3xl font-bold text-black">{timeLeft.seconds || '0'}</span>
+            <span className="text-black">Seconds</span>
+          </div>
         </div>
       </div>
     </div>
